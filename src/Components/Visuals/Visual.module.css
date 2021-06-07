@@ -1,0 +1,59 @@
+.arrayContainer {
+    position: absolute;
+    display: flex;
+    width:100vw;
+    height:100vh;
+    background-color:rgb(4, 14, 34);
+    overflow: hidden;
+    bottom:0;
+    /* top: 100px; */
+  }
+  
+  .Bars {
+    width: 85vw;
+    padding: 10px;
+    padding: 20px;
+    height:100vh;
+    overflow-y: hidden;
+  }
+  .sideBar{
+    width:15vw;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(4, 14, 34);
+    box-shadow: 0 0 5px deeppink;
+}
+.Button{
+  background-color: rgba(0,0,0,0);
+  outline: none;
+  border:none;
+  border-bottom:1px solid pink;
+  padding:10px 0;
+  color: white;
+  font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  text-shadow: 0 0 5px deeppink;
+  box-shadow: 0 0 5px deeppink;
+  margin-bottom: 2px;
+  font-weight: bold;
+}
+.font{
+  font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  text-align: center;
+  color:deeppink;
+  margin:0;
+  padding:0;
+}
+.Input{
+  margin:15px 0;
+  padding:5px;
+  font-size: 150%;
+  color:deeppink;
+  background-color: rgb(4, 14, 34);
+  border-top:1px solid deeppink;
+  border-bottom:1px solid deeppink;
+}
+.Input:active, .Input:focus{
+  background-color: rgb(14, 24, 44);
+  border:none
+}
