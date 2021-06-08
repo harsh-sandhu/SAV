@@ -4,6 +4,7 @@ import { getBubbleSortAnimations } from "../Algorithm/BubbleSort";
 import { getInsertionSortAnimations } from "../Algorithm/InsertionSort";
 import { getQuickSortAnimations } from "../Algorithm/QuickSort";
 import { getSelectionSortAnimations } from "../Algorithm/SelectionSort";
+import { Fragment } from "react";
 import ArrayBar from "./ArrayBar/ArrayBar";
 import classes from "./Visual.module.css";
 const UNSORTED_COLOR = "deeppink";
@@ -173,71 +174,131 @@ const Visual = () => {
   };
 
   return (
-    <div className={classes.arrayContainer}>
-      <div className={classes.Bars}>
-        {change &&
-          array.map((value, idx) => {
-            return (
-              <ArrayBar
-                key={idx}
-                value={value}
-                unsortedColor={UNSORTED_COLOR}
-                border={UNSORTED_BORDER_COLOR}
-                width={w}
-                class="array-bar"
-                style={{ verticalAlign: "bottom" }}
-              />
-            );
-          })}
+    <Fragment>
+      <div className={classes.clear}>
+        <div className={classes.clearIn}>
+          <h1 className={classes.head}>Invalid screen Ratio</h1>
+          <h3>Use Laptop or personal Computer for Best Experience</h3>
+          <a
+            style={{
+              textDecoration: "none",
+              textAlign: "center",
+              color: "deeppink",
+              marginTop: "15vh",
+            }}
+            target="blank"
+            href="https://github.com/harsh-sandhu"
+          >
+            harsh-sandhu@GitHub
+          </a>
+        </div>
       </div>
-      <div className={classes.sideBar}>
-        <h1 className={classes.font}>Sorting</h1>
-        <h2 className={classes.font}>Algorithm</h2>
-        <h2 style={{borderBottom:'2px solid deeppink'}} className={classes.font}>Visualizer</h2>
-        <h5 style={{marginLeft:'10px',marginTop:'20px',marginBottom:'-10px',color:'deeppink'}}>Number of Bars:</h5>
-        <input
-          type="number"
-          max="200"
-          min="20"
-          onChange={InputHandler}
-          className={classes.Input}
-          placeholder={number}
-        ></input>
-        <h6 style={{marginLeft:'10px',marginTop:'-10px',color:'deeppink'}}>(min:20 max:200)</h6>
-        <button style={{margin:'20px 0',boxShadow:'none',borderBottom:'1px solid pink',borderTop:'1px solid pink',fontSize:'120%'}} className={classes.Button} onClick={resetArray}>
-          Generate New Array
-        </button>
-        <h3 style={{marginLeft:'10px',marginBottom:'1px',color:'deeppink'}}>Algorithms:</h3>
-        <button className={classes.Button} onClick={() => quickSort()}>
-          Quick Sort
-        </button>
-        <button className={classes.Button} onClick={mergeSort}>
-          Merge Sort
-        </button>
-        <button className={classes.Button} onClick={() => insertionSort()}>
-          Insertion Sort
-        </button>
-        <button className={classes.Button} onClick={() => SelectionSort()}>
-          Selection Sort
-        </button>
-        <button className={classes.Button} onClick={() => bubbleSort()}>
-          Bubble Sort
-        </button>
-        <a
-          style={{
-            textDecoration: "none",
-            textAlign: "center",
-            color: "pink",
-            fontWeight: "bold",
-            marginTop: "15vh",
-          }}
-          target="blank"
-          href="https://github.com/harsh-sandhu"
-        >
-          harsh-sandhu@GitHub
-        </a>
+      <div className={classes.arrayContainer}>
+        <div className={classes.Bars}>
+          {change &&
+            array.map((value, idx) => {
+              return (
+                <ArrayBar
+                  key={idx}
+                  value={value}
+                  unsortedColor={UNSORTED_COLOR}
+                  border={UNSORTED_BORDER_COLOR}
+                  width={w}
+                  class="array-bar"
+                  style={{ verticalAlign: "bottom" }}
+                />
+              );
+            })}
+        </div>
+        <div className={classes.sideBar}>
+          <h1 className={classes.font}>Sorting</h1>
+          <h2 className={classes.font}>Algorithm</h2>
+          <h2
+            style={{ borderBottom: "2px solid deeppink" }}
+            className={classes.font}
+          >
+            Visualizer
+          </h2>
+          <h5
+            style={{
+              marginLeft: "10px",
+              marginTop: "20px",
+              marginBottom: "-10px",
+              color: "deeppink",
+            }}
+          >
+            Number of Bars:
+          </h5>
+          <input
+            type="number"
+            max="200"
+            min="20"
+            onChange={InputHandler}
+            className={classes.Input}
+            placeholder={number}
+          ></input>
+          <h6
+            style={{
+              marginLeft: "10px",
+              marginTop: "-10px",
+              color: "deeppink",
+            }}
+          >
+            (min:20 max:200)
+          </h6>
+          <button
+            style={{
+              margin: "20px 0",
+              boxShadow: "none",
+              borderBottom: "1px solid pink",
+              borderTop: "1px solid pink",
+              fontSize: "120%",
+            }}
+            className={classes.Button}
+            onClick={resetArray}
+          >
+            Generate New Array
+          </button>
+          <h3
+            style={{
+              marginLeft: "10px",
+              marginBottom: "1px",
+              color: "deeppink",
+            }}
+          >
+            Algorithms:
+          </h3>
+          <button className={classes.Button} onClick={() => quickSort()}>
+            Quick Sort
+          </button>
+          <button className={classes.Button} onClick={mergeSort}>
+            Merge Sort
+          </button>
+          <button className={classes.Button} onClick={() => insertionSort()}>
+            Insertion Sort
+          </button>
+          <button className={classes.Button} onClick={() => SelectionSort()}>
+            Selection Sort
+          </button>
+          <button className={classes.Button} onClick={() => bubbleSort()}>
+            Bubble Sort
+          </button>
+          <a
+            style={{
+              textDecoration: "none",
+              textAlign: "center",
+              color: "pink",
+              fontWeight: "bold",
+              marginTop: "15vh",
+            }}
+            target="blank"
+            href="https://github.com/harsh-sandhu"
+          >
+            harsh-sandhu@GitHub
+          </a>
+        </div>
       </div>
-    </div>
+    </Fragment>
   );
 };
 

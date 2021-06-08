@@ -5,7 +5,7 @@
     height:100vh;
     background-color:rgb(4, 14, 34);
     overflow: hidden;
-    bottom:0;
+    vertical-align: middle;
     /* top: 100px; */
   }
   
@@ -56,4 +56,29 @@
 .Input:active, .Input:focus{
   background-color: rgb(14, 24, 44);
   border:none
+}
+.clear{
+  display:none;
+  color:deeppink;
+  text-align: center;
+  margin: auto;
+  padding:0;
+}
+.clearIn{
+  width:100vw;
+  height:100vh;
+  margin:0;
+  overflow: hidden;
+  background-color:rgb(4, 14, 34);
+}
+.head{
+  padding-top: 30vh;
+}
+@media (max-width:1000px) {
+  .clear{
+    display:contents;
+  }
+  .arrayContainer{
+    display:none;
+  }
 }
